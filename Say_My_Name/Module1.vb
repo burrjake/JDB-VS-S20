@@ -9,6 +9,9 @@ Option Explicit On
 Module Module1
 
     Sub Main()
+        'ask user "What's your name?"
+        'then display the message 
+
         Dim userMessage As String
 
         Console.WriteLine("What's your name?")
