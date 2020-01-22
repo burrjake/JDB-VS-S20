@@ -11,7 +11,7 @@ Module Module1
     Sub Main()
         Dim userMessage As String
 
-        Console.WriteLine("Hello, what is your name?")
+        Console.WriteLine("What's your name?")
         userMessage = Console.ReadLine()
         Console.WriteLine("Hello, " & userMessage & " when you are done press enter.")
         Console.ReadLine()
