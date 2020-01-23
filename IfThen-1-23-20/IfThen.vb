@@ -12,6 +12,8 @@
             Console.WriteLine("First number is bigger.")
         ElseIf firstNumber < secondNumber Then
             Console.WriteLine("Second number is bigger.")
+        ElseIf firstNumber = secondNumber Then
+            Console.WriteLine("First number is equal to the second number.")
         ElseIf firstNumber <= secondNumber Then
             Console.WriteLine("First number is smaller or equal to the second number.")
         ElseIf firstNumber >= secondNumber Then
