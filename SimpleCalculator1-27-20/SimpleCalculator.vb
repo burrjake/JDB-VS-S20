@@ -32,15 +32,35 @@ Module SimpleCalculator
 
         'perform proper operation
         If userMessage = "add" Then
-            Console.WriteLine(CInt(firstNumber) + CInt(secondNumber))
+            Try
+                Console.WriteLine(CInt(firstNumber) + CInt(secondNumber))
+            Catch ex As Exception
+                Console.WriteLine("Please, enter a whole number.")
+            End Try
         ElseIf userMessage = "+" Then
-            Console.WriteLine(CInt(firstNumber) + CInt(secondNumber))
+            Try
+                Console.WriteLine(CInt(firstNumber) + CInt(secondNumber))
+            Catch ex As Exception
+                Console.WriteLine("Please, enter a whole number.")
+            End Try
         ElseIf userMessage = "multiply" Then
-            Console.WriteLine(CInt(firstNumber) * CInt(secondNumber))
+            Try
+                Console.WriteLine(CInt(firstNumber) * CInt(secondNumber))
+            Catch ex As Exception
+                Console.WriteLine("Please, enter a whole number.")
+            End Try
         ElseIf userMessage = "x" Then
-            Console.WriteLine(CInt(firstNumber) * CInt(secondNumber))
+            Try
+                Console.WriteLine(CInt(firstNumber) * CInt(secondNumber))
+            Catch ex As Exception
+                Console.WriteLine("Please, enter a whole number.")
+            End Try
         ElseIf userMessage = "*" Then
-            Console.WriteLine(CInt(firstNumber) * CInt(secondNumber))
+            Try
+                Console.WriteLine(CInt(firstNumber) * CInt(secondNumber))
+            Catch ex As Exception
+                Console.WriteLine("Please, enter whole numbers.")
+            End Try
         Else
             Console.WriteLine("Sorry that is not a valid option.")
         End If
