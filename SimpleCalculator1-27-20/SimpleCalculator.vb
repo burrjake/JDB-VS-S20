@@ -14,60 +14,74 @@ Module SimpleCalculator
         Console.WriteLine("Press enter when you are ready to start.")
         Console.ReadLine()
 
-        'prompt user for two numbers
-        Console.WriteLine("Enter the first number.")
-
-        Dim firstNumber As String
-        Dim secondNumber As String
-
-        firstNumber = Console.ReadLine()
-
-        Console.WriteLine("Enter the second number.")
-        secondNumber = Console.ReadLine()
-
-        'prompt user to add or multiply
-        Console.WriteLine("Do you want to add or multiply?")
+        Dim firstNumber As Integer
+        Dim secondNumber As Integer
         Dim userMessage As String
-        userMessage = Console.ReadLine()
+        Dim quitProgram As Boolean
+        Dim promptUser As Boolean
 
-        'perform proper operation
-        If userMessage = "add" Then
-            Try
-                Console.WriteLine(CInt(firstNumber) + CInt(secondNumber))
-            Catch ex As Exception
-                Console.WriteLine("Please, enter a whole number.")
-            End Try
-        ElseIf userMessage = "+" Then
-            Try
-                Console.WriteLine(CInt(firstNumber) + CInt(secondNumber))
-            Catch ex As Exception
-                Console.WriteLine("Please, enter a whole number.")
-            End Try
-        ElseIf userMessage = "multiply" Then
-            Try
-                Console.WriteLine(CInt(firstNumber) * CInt(secondNumber))
-            Catch ex As Exception
-                Console.WriteLine("Please, enter a whole number.")
-            End Try
-        ElseIf userMessage = "x" Then
-            Try
-                Console.WriteLine(CInt(firstNumber) * CInt(secondNumber))
-            Catch ex As Exception
-                Console.WriteLine("Please, enter a whole number.")
-            End Try
-        ElseIf userMessage = "*" Then
-            Try
-                Console.WriteLine(CInt(firstNumber) * CInt(secondNumber))
-            Catch ex As Exception
-                Console.WriteLine("Please, enter whole numbers.")
-            End Try
-        Else
-            Console.WriteLine("Sorry that is not a valid option.")
-        End If
-        'display answer
+        promptUser = True
+        quitProgram = False
 
-        Console.WriteLine("Press enter when finished.")
-        Console.ReadLine()
+        Do While quitProgram = False
+
+            'prompt user for two numbers
+            Console.WriteLine("Enter the first number.")
+
+            While promptUser = True
+                Try
+                    promptUser = False
+                    firstNumber = CInt(Console.ReadLine())
+            Catch ex As Exception
+                Console.WriteLine("Please, enter a whole number.")
+                    promptUser = True
+                End Try
+            End While
+
+            Console.WriteLine("Enter the second number.")
+            promptUser = True
+            While promptUser = True
+                Try
+                    promptUser = False
+                    secondNumber = CInt(Console.ReadLine())
+                Catch ex As Exception
+                    Console.WriteLine("Please, enter a whole number.")
+                    promptUser = True
+                End Try
+            End While
+
+            'prompt user to add or multiply
+            Console.WriteLine("Do you want to add or multiply?")
+            userMessage = Console.ReadLine()
+
+            'perform proper operation
+            If userMessage = "add" Then
+                Console.WriteLine((firstNumber) + (secondNumber))
+            ElseIf userMessage = "+" Then
+                Console.WriteLine((firstNumber) + (secondNumber))
+            ElseIf userMessage = "plus" Then
+                Console.WriteLine(firstNumber + secondNumber)
+            ElseIf userMessage = "multiply" Then
+                Console.WriteLine((firstNumber) * (secondNumber))
+            ElseIf userMessage = "x" Then
+                Console.WriteLine((firstNumber) * (secondNumber))
+            ElseIf userMessage = "times" Then
+                Console.WriteLine((firstNumber) * (secondNumber))
+            ElseIf userMessage = "*" Then
+                Console.WriteLine((firstNumber) * (secondNumber))
+            Else
+                Console.WriteLine("Sorry that is not a valid option.")
+            End If
+            'display answer
+
+            Console.WriteLine("Press Enter to run, again. Enter Q to quit")
+            If Console.ReadLine() = "q" Then
+                quitProgram = True
+            Else
+                quitProgram = False
+            End If
+            Console.Clear()
+        Loop
     End Sub
 
 End Module
