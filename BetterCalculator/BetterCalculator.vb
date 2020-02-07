@@ -15,6 +15,7 @@ Module BetterCalculator
         Dim userMessage As String
         Dim quitProgram As Boolean
         Dim promptUser As Boolean
+        Dim userInput As String
 
         promptUser = True
         quitProgram = False
@@ -25,12 +26,13 @@ Module BetterCalculator
                 Console.WriteLine("Choose a number")
                 While promptUser = True
                     Try
-                        promptUser = False
-                        firstNumber = CInt(Console.ReadLine())
-                        Console.WriteLine("You entered " & Chr(34) & firstNumber & Chr(34))
-                    Catch ex As Exception
-                        Console.WriteLine("You entered " & Chr(34) & Console.ReadLine() & Chr(34) & ", please enter a whole number.")
-                        promptUser = True
+                    promptUser = False
+                    userInput = Console.ReadLine()
+                    firstNumber = CInt(userInput)
+                    Console.WriteLine("You entered " & Chr(34) & firstNumber & Chr(34))
+                Catch ex As Exception
+                    Console.WriteLine("You entered " & Chr(34) & userInput & Chr(34) & ", please enter a whole number.")
+                    promptUser = True
                     End Try
                 End While
 
@@ -38,12 +40,13 @@ Module BetterCalculator
                 promptUser = True
                 While promptUser = True
                     Try
-                        promptUser = False
-                        secondNumber = CInt(Console.ReadLine())
-                        Console.WriteLine("You entered " & Chr(34) & firstNumber & Chr(34))
+                    promptUser = False
+                    userInput = Console.ReadLine()
+                    secondNumber = CInt(userInput)
+                    Console.WriteLine("You entered " & Chr(34) & firstNumber & Chr(34))
                     Catch ex As Exception
-                        Console.WriteLine("You entered " & Chr(34) & Console.ReadLine() & Chr(34) & ", please enter a whole number.")
-                        promptUser = True
+                    Console.WriteLine("You entered " & Chr(34) & userInput & Chr(34) & ", please enter a whole number.")
+                    promptUser = True
                     End Try
                 End While
 
