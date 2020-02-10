@@ -24,7 +24,7 @@ Module BetterCalculator
             Console.WriteLine("Please enter two numbers. Enter " & Chr(34) & "Q" & Chr(34) & " at any time to quit.")
 
             'prompt user to select two numbers
-            Console.WriteLine("Choose a number")
+            Console.WriteLine("Choose a number:")
             promptUser = True
             While promptUser = True
                 userInput = Console.ReadLine()
@@ -51,8 +51,7 @@ Module BetterCalculator
             End While
             promptUser = True
 
-            '
-            Console.WriteLine("Choose a number")
+            Console.WriteLine("Choose a number:")
             promptUser = True
             While promptUser = True
                 userInput = Console.ReadLine()
@@ -87,7 +86,7 @@ retryOptions:
                 Console.WriteLine("2. Subtract")
                 Console.WriteLine("3. Multiply")
                 Console.WriteLine("4. Divide")
-                userMessage = Console.ReadLine()
+            userMessage = Console.ReadLine()
 
             'perform quit
             If userMessage = "q" Then
@@ -100,12 +99,16 @@ retryOptions:
 
                 'perform proper operation
             ElseIf userMessage = "1" Then
+                Console.WriteLine("You entered " & Chr(34) & userMessage & Chr(34))
                 Console.WriteLine(firstNumber & "+" & secondNumber & "=" & (firstNumber) + (secondNumber))
             ElseIf userMessage = "2" Then
+                Console.WriteLine("You entered " & Chr(34) & userMessage & Chr(34))
                 Console.WriteLine(firstNumber & "-" & secondNumber & "=" & (firstNumber) - (secondNumber))
             ElseIf userMessage = "3" Then
+                Console.WriteLine("You entered " & Chr(34) & userMessage & Chr(34))
                 Console.WriteLine(firstNumber & "*" & secondNumber & "=" & (firstNumber) * (secondNumber))
             ElseIf userMessage = "4" Then
+                Console.WriteLine("You entered " & Chr(34) & userMessage & Chr(34))
                 Console.WriteLine(firstNumber & "/" & secondNumber & "=" & (firstNumber) / (secondNumber))
             Else
                 Console.WriteLine("You entered " & Chr(34) & userMessage & Chr(34))
