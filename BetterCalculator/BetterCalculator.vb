@@ -19,11 +19,10 @@ Module BetterCalculator
 
         promptUser = True
         quitProgram = False
-
-        Console.WriteLine("Please enter two numbers. Enter " & Chr(34) & "Q" & Chr(34) & " at any time to quit.")
-
         Do While quitProgram = False
-                Console.WriteLine("Choose a number")
+            Console.WriteLine("Please enter two numbers. Enter " & Chr(34) & "Q" & Chr(34) & " at any time to quit.")
+
+            Console.WriteLine("Choose a number")
                 While promptUser = True
                     Try
                     promptUser = False
@@ -34,9 +33,10 @@ Module BetterCalculator
                     Console.WriteLine("You entered " & Chr(34) & userInput & Chr(34) & ", please enter a whole number.")
                     promptUser = True
                     End Try
-                End While
+            End While
+            promptUser = True
 
-                Console.WriteLine("Choose a number")
+            Console.WriteLine("Choose a number")
                 promptUser = True
                 While promptUser = True
                     Try
@@ -49,8 +49,9 @@ Module BetterCalculator
                     promptUser = True
                     End Try
                 End While
+            promptUser = True
 
-                Console.WriteLine("Choose one Of the following options:")
+            Console.WriteLine("Choose one Of the following options:")
                 Console.WriteLine("1. Add")
                 Console.WriteLine("2. Subtract")
                 Console.WriteLine("3. Multiply")
@@ -58,14 +59,14 @@ Module BetterCalculator
                 userMessage = Console.ReadLine()
 
                 If userMessage = "1" Then
-                    Console.WriteLine((firstNumber) + (secondNumber))
-                ElseIf userMessage = "2" Then
-                    Console.WriteLine((firstNumber) - (secondNumber))
-                ElseIf userMessage = "3" Then
-                    Console.WriteLine((firstNumber) * (secondNumber))
-                ElseIf userMessage = "4" Then
-                    Console.WriteLine((firstNumber) / (secondNumber))
-                Else
+                Console.WriteLine(firstNumber & "+" & secondNumber & "=" & (firstNumber) + (secondNumber))
+            ElseIf userMessage = "2" Then
+                Console.WriteLine(firstNumber & "-" & secondNumber & "=" & (firstNumber) - (secondNumber))
+            ElseIf userMessage = "3" Then
+                Console.WriteLine(firstNumber & "*" & secondNumber & "=" & (firstNumber) * (secondNumber))
+            ElseIf userMessage = "4" Then
+                Console.WriteLine(firstNumber & "/" & secondNumber & "=" & (firstNumber) / (secondNumber))
+            Else
                     Console.WriteLine("You entered" & Chr(34) & userMessage & Chr(34))
                 End If
             Loop
