@@ -1,5 +1,8 @@
 ﻿Public Class ValidateUserDataForm
+    Dim userMessage As String
 
-    If TextBox1 = "" Then
-    MsgBox("")
+    Select Case ""
+
+
+
 End Class
