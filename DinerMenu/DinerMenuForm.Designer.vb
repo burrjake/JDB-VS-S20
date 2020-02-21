@@ -26,15 +26,18 @@ Partial Class DinerMenuForm
         Me.SoupButton = New System.Windows.Forms.Button()
         Me.SaladButton = New System.Windows.Forms.Button()
         Me.FishButton = New System.Windows.Forms.Button()
+        Me.TitleLabel = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'ExitButton
         '
+        Me.ExitButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.ExitButton.Location = New System.Drawing.Point(635, 379)
         Me.ExitButton.Name = "ExitButton"
         Me.ExitButton.Size = New System.Drawing.Size(134, 51)
         Me.ExitButton.TabIndex = 0
-        Me.ExitButton.Text = "Exit"
+        Me.ExitButton.Text = "E&xit"
         Me.ExitButton.UseVisualStyleBackColor = True
         '
         'SoupButton
@@ -64,17 +67,40 @@ Partial Class DinerMenuForm
         Me.FishButton.Text = "Fish"
         Me.FishButton.UseVisualStyleBackColor = True
         '
+        'TitleLabel
+        '
+        Me.TitleLabel.Enabled = False
+        Me.TitleLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TitleLabel.Location = New System.Drawing.Point(203, 22)
+        Me.TitleLabel.Name = "TitleLabel"
+        Me.TitleLabel.Size = New System.Drawing.Size(290, 69)
+        Me.TitleLabel.TabIndex = 4
+        Me.TitleLabel.Text = "Finney's Diner"
+        Me.TitleLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'Label1
+        '
+        Me.Label1.Location = New System.Drawing.Point(38, 86)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(645, 254)
+        Me.Label1.TabIndex = 5
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
         'DinerMenuForm
         '
+        Me.AcceptButton = Me.SoupButton
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.CancelButton = Me.ExitButton
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.TitleLabel)
         Me.Controls.Add(Me.FishButton)
         Me.Controls.Add(Me.SaladButton)
         Me.Controls.Add(Me.SoupButton)
         Me.Controls.Add(Me.ExitButton)
         Me.Name = "DinerMenuForm"
-        Me.Text = "Form1"
+        Me.Text = "Finney's Diner Special Menu"
         Me.ResumeLayout(False)
 
     End Sub
@@ -83,4 +109,6 @@ Partial Class DinerMenuForm
     Friend WithEvents SoupButton As Button
     Friend WithEvents SaladButton As Button
     Friend WithEvents FishButton As Button
+    Friend WithEvents TitleLabel As Label
+    Friend WithEvents Label1 As Label
 End Class
