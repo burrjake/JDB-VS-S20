@@ -27,7 +27,8 @@ Partial Class DinerMenuForm
         Me.SaladButton = New System.Windows.Forms.Button()
         Me.FishButton = New System.Windows.Forms.Button()
         Me.TitleLabel = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.DisplaySpecialLabel = New System.Windows.Forms.Label()
+        Me.SpecialNameLabel = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'ExitButton
@@ -71,20 +72,28 @@ Partial Class DinerMenuForm
         '
         Me.TitleLabel.Enabled = False
         Me.TitleLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TitleLabel.Location = New System.Drawing.Point(203, 22)
+        Me.TitleLabel.Location = New System.Drawing.Point(206, 22)
         Me.TitleLabel.Name = "TitleLabel"
-        Me.TitleLabel.Size = New System.Drawing.Size(290, 69)
+        Me.TitleLabel.Size = New System.Drawing.Size(333, 69)
         Me.TitleLabel.TabIndex = 4
         Me.TitleLabel.Text = "Finney's Diner"
         Me.TitleLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
-        'Label1
+        'DisplaySpecialLabel
         '
-        Me.Label1.Location = New System.Drawing.Point(38, 86)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(645, 254)
-        Me.Label1.TabIndex = 5
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.DisplaySpecialLabel.Location = New System.Drawing.Point(124, 134)
+        Me.DisplaySpecialLabel.Name = "DisplaySpecialLabel"
+        Me.DisplaySpecialLabel.Size = New System.Drawing.Size(508, 166)
+        Me.DisplaySpecialLabel.TabIndex = 5
+        Me.DisplaySpecialLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'SpecialNameLabel
+        '
+        Me.SpecialNameLabel.Location = New System.Drawing.Point(227, 116)
+        Me.SpecialNameLabel.Name = "SpecialNameLabel"
+        Me.SpecialNameLabel.Size = New System.Drawing.Size(282, 18)
+        Me.SpecialNameLabel.TabIndex = 7
+        Me.SpecialNameLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'DinerMenuForm
         '
@@ -93,7 +102,8 @@ Partial Class DinerMenuForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.ExitButton
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.SpecialNameLabel)
+        Me.Controls.Add(Me.DisplaySpecialLabel)
         Me.Controls.Add(Me.TitleLabel)
         Me.Controls.Add(Me.FishButton)
         Me.Controls.Add(Me.SaladButton)
@@ -110,5 +120,6 @@ Partial Class DinerMenuForm
     Friend WithEvents SaladButton As Button
     Friend WithEvents FishButton As Button
     Friend WithEvents TitleLabel As Label
-    Friend WithEvents Label1 As Label
+    Friend WithEvents DisplaySpecialLabel As Label
+    Friend WithEvents SpecialNameLabel As Label
 End Class
