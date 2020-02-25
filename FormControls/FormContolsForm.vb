@@ -15,7 +15,7 @@
             DisplayLabel.Text = NameTextBox
         End If
 
-        If CheckBox2 Then
+        If CheckBox2 =  Then
     End Sub
 
 End Class
