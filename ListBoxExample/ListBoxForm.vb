@@ -6,7 +6,7 @@
     End Sub
 
     Private Sub AddItemButton_Click(sender As Object, e As EventArgs) Handles AddItemButton.Click
-        DataListBox.Items.Add(LastNameTextBox.Text & ", " & FirstNameTextBox.Text)
+        DataListBox.Items.Add(FirstNameTextBox.Text & " " & LastNameTextBox.Text)
     End Sub
 
     Private Sub ClearButton_Click(sender As Object, e As EventArgs) Handles ClearButton.Click
@@ -18,7 +18,15 @@
     End Sub
 
     Private Sub DataListBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles DataListBox.SelectedIndexChanged
+        Dim index As Integer
+
         Me.Text = DataListBox.SelectedIndex.ToString
         'TO DO add selected to first name and last name text box
+
+        index = InStr(DataListBox.SelectedItem.ToString, " ")
+
+        FirstNameTextBox.Text = Strings.Left(DataListBox.SelectedItem.ToString, index)
+        LastNameTextBox.Text = Strings.Right(DataListBox.SelectedItem.ToString, index)
     End Sub
+
 End Class
