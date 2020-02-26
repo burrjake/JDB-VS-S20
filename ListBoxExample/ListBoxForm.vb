@@ -25,8 +25,9 @@
 
         index = InStr(DataListBox.SelectedItem.ToString, " ")
 
-        FirstNameTextBox.Text = Strings.Left(DataListBox.SelectedItem.ToString, index)
-        LastNameTextBox.Text = Strings.Right(DataListBox.SelectedItem.ToString, index)
+        FirstNameTextBox.Text = Strings.Left(Trim(DataListBox.SelectedItem.ToString), index)
+        'LastNameTextBox.Text = Strings.Right(DataListBox.SelectedItem.ToString, index)
+        LastNameTextBox.Text = Strings.Mid(DataListBox.SelectedItem.ToString), index, Len(Trim(DataListBox.SelectedItem.ToString)))
     End Sub
 
 End Class
