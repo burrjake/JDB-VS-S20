@@ -23,17 +23,19 @@ Module SubPractice
     ' End Function
     'what
     Sub DoMath(firstNumber As Integer, secondNumber As Integer, operatorChoice As String)
-        Dim result As Double
+        'Dim result As Double
 
 
-        If operatorChoice = "Add" Then
-            Console.WriteLine(firstNumber + secondNumber)
-        ElseIf operatorChoice = "Subtract" Then
-            Console.WriteLine(firstNumber - secondNumber)
-        ElseIf operatorChoice = "Multiply" Then
-            Console.WriteLine(firstNumber * secondNumber)
-        ElseIf operatorChoice = "Divide" Then
-            Console.WriteLine(firstNumber / secondNumber)
-        End If
+        ' If operatorChoice = "Add" Then
+        'Console.WriteLine(firstNumber + secondNumber)
+        '  ElseIf operatorChoice = "Subtract" Then
+        'Console.WriteLine(firstNumber - secondNumber)
+        ' ElseIf operatorChoice = "Multiply" Then
+        'Console.WriteLine(firstNumber * secondNumber)
+        'ElseIf operatorChoice = "Divide" Then
+        'Console.WriteLine(firstNumber / secondNumber)
+        '  End If
     End Sub
+
+
 End Module
