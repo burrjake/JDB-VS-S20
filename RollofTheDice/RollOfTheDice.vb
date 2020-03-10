@@ -1,4 +1,3 @@
-Imports System
 
 Module RollOfTheDice
     Sub Main()
@@ -6,19 +5,32 @@ Module RollOfTheDice
         Dim firstRoll As Integer
         Dim secondRoll As Integer
         Dim rollSum As Integer
-        'Dim diceArray(3, 1000) As Integer
-        'For i = 1 To 1000
+        Dim diceArray(12, 2) As Integer
+        For i = 1 To 1000
 
-        Randomize()
-            firstRoll = ((Rnd() * 6) + 1)
-            Console.WriteLine(firstRoll)
+
             Randomize()
-            secondRoll = ((Rnd() * 6) + 1)
-        Console.WriteLine(secondRoll)
-        rollSum = firstRoll + secondRoll
-            Console.WriteLine(rollSum)
-            Console.ReadLine()
+            firstRoll = Int((Rnd() * 6) + 1)
+            Randomize()
+            secondRoll = Int((Rnd() * 6) + 1)
+            rollSum = firstRoll + secondRoll
 
-        'Next
+            diceArray(rollSum, 2) += 1
+
+            For j = 2 To 12
+                diceArray(j, 1) = j
+            Next
+
+        Next
+
+        Console.WriteLine("      Total Dice    Times Rolled")
+        For i = 2 To 12
+            For j = 1 To 2
+                Console.Write(diceArray(i, j).ToString().PadLeft(15) & "|")
+            Next
+            Console.WriteLine()
+
+        Next
+
     End Sub
 End Module
