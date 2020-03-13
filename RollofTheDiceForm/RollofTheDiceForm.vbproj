@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7D4C90BF-12D0-4674-908F-CEFE18DC9880}</ProjectGuid>
+    <ProjectGuid>{6E830286-70E4-46AE-9E7A-CD6A9D163485}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <StartupObject>RollofTheDiceForm.My.MyApplication</StartupObject>
     <RootNamespace>RollofTheDiceForm</RootNamespace>

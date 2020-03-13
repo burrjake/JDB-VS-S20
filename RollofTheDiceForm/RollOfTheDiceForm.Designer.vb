@@ -22,65 +22,65 @@ Partial Class RollOfTheDiceForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.RollListBox = New System.Windows.Forms.ListBox()
+        Me.RollButton = New System.Windows.Forms.Button()
+        Me.ClearButton = New System.Windows.Forms.Button()
+        Me.ExitButton = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'ListBox1
+        'RollListBox
         '
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.ItemHeight = 16
-        Me.ListBox1.Location = New System.Drawing.Point(12, 12)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(585, 420)
-        Me.ListBox1.TabIndex = 0
+        Me.RollListBox.FormattingEnabled = True
+        Me.RollListBox.ItemHeight = 16
+        Me.RollListBox.Location = New System.Drawing.Point(12, 12)
+        Me.RollListBox.Name = "RollListBox"
+        Me.RollListBox.Size = New System.Drawing.Size(407, 388)
+        Me.RollListBox.TabIndex = 0
         '
-        'Button1
+        'RollButton
         '
-        Me.Button1.Location = New System.Drawing.Point(636, 12)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(134, 73)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.RollButton.Location = New System.Drawing.Point(458, 12)
+        Me.RollButton.Name = "RollButton"
+        Me.RollButton.Size = New System.Drawing.Size(150, 67)
+        Me.RollButton.TabIndex = 1
+        Me.RollButton.Text = "Roll"
+        Me.RollButton.UseVisualStyleBackColor = True
         '
-        'Button2
+        'ClearButton
         '
-        Me.Button2.Location = New System.Drawing.Point(636, 109)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(134, 73)
-        Me.Button2.TabIndex = 2
-        Me.Button2.Text = "Button2"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.ClearButton.Location = New System.Drawing.Point(458, 95)
+        Me.ClearButton.Name = "ClearButton"
+        Me.ClearButton.Size = New System.Drawing.Size(150, 67)
+        Me.ClearButton.TabIndex = 2
+        Me.ClearButton.Text = "Clear"
+        Me.ClearButton.UseVisualStyleBackColor = True
         '
-        'Button3
+        'ExitButton
         '
-        Me.Button3.Location = New System.Drawing.Point(636, 213)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(134, 73)
-        Me.Button3.TabIndex = 3
-        Me.Button3.Text = "Button3"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.ExitButton.Location = New System.Drawing.Point(458, 184)
+        Me.ExitButton.Name = "ExitButton"
+        Me.ExitButton.Size = New System.Drawing.Size(150, 67)
+        Me.ExitButton.TabIndex = 3
+        Me.ExitButton.Text = "Exit"
+        Me.ExitButton.UseVisualStyleBackColor = True
         '
-        'Form1
+        'RollOfTheDiceForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.ListBox1)
-        Me.Name = "Form1"
+        Me.Controls.Add(Me.ExitButton)
+        Me.Controls.Add(Me.ClearButton)
+        Me.Controls.Add(Me.RollButton)
+        Me.Controls.Add(Me.RollListBox)
+        Me.Name = "RollOfTheDiceForm"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents ListBox1 As ListBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents RollListBox As ListBox
+    Friend WithEvents RollButton As Button
+    Friend WithEvents ClearButton As Button
+    Friend WithEvents ExitButton As Button
 End Class
